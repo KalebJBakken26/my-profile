@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kaleb Bakken's Profile Page</title>
+    <style>
+      body {
+        font-family: 'NewBaskervilleITCbyBT-Roman';
+        background-color: #e0f7fa;
+        text-align: center;
+        padding: 75px;
+    }
+      img {
+        width: 200px;
+        border-radius: 80%;
+        border: 5px solid #122560;
+    }
+      h1 {
+        color: #122560;
+    }
+      p {
+        font-size: 20px;
+        font-family: 'Georgia';
+        color: #0F1020;
+    }
+      button {
+        padding: 10px 15px;
+        font-size: 16px;
+        font-family: 'Georgia', sans-serif;
+        background-color: #122560;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+      
+      #funFact {
+        display: none;
+        margin-top: 20px;
+        font-weight: bold;
+        font-family: 'ZudJuiceItalic';
+        color: #122560;
+    }
+
+    #Hobbies {
+        font-family: 'ZudJuiceItalic' ;
+    }
+    #themeBtn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        padding: 10px 16px;
+        font-family: 'Georgia', sans-serif; 
+        font-size: 14px;
+        border: none;
+        border-radius: 8px;
+        background-color: #122560;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    #themeBtn:hover {
+        background-color: #3E363F;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>Kaleb Bakken </h1>
+    <img src="https://media.licdn.com/dms/image/v2/D5603AQErro2Ev3aLEg/profile-displayphoto-scale_200_200/B56ZfK531iH8AY-/0/1751455859467?e=1756944000&v=beta&t=dET84s3TB3ZKU7vOjvaesCVqWF41c8zzfzgLXS7R0Qw" alt="Profile Picture">
+    <p>Hello! I'm a fresh graduate learning full-stack web development. I enjoy coding,  listening to music, gaming, streaming, reading, working out at the gym, and spending time with my wife.</p>
+   
+    <p>Find me on:
+        <a href="https://github.com/KalebJBakken26" target="_blank">GitHub</a> |
+        <a href="https://www.linkedin.com/in/kaleb-j-bakken/" target="_blank">LinkedIn</a>
+      </p>
+
+    <!-- Fun Fact Section -->
+    <button onclick="toggleFunFact()" id="toggleButton">Show Fun Fact</button>
+    <p id="funFact" style="display: none;">🌟 I am descended from the Aztecs!</p>
+    
+    <!-- Hobbies Section -->
+    <button onclick="toggleHobbies()" id="hobbiesButton">Show Hobbies</button>
+    <div id="hobbies" style="display: none; margin-top: 20px;">
+        <h2>My Hobbies</h2>
+            <ul style="list-style: none; padding: 0;">
+                <li>🎮 Gaming</li>
+                <li>🎵 Making Music</li>
+                <li>🖊️ Sketching</li>
+                <li>📚 Reading Sci-Fi</li>
+            </ul>
+    </div>
+    <button onclick="toggleTheme()" id="themeBtn">Toggle Dark Mode</button>
+
+    <script src="https://c.webfontfree.com/c.js?f=ZudJuiceItalic" type="text/javascript"></script>
+    <script src="https://c.webfontfree.com/c.js?f=NewBaskervilleITCbyBT-Roman" type="text/javascript"></script>
+    <script src="https://c.webfontfree.com/c.js?f=Georgia" type="text/javascript"></script>
+
+
+    <script>
+        function toggleFunFact() {
+          const fact = document.getElementById("funFact");
+          const hobbies = document.getElementById("hobbies");
+          const factButton = document.getElementById("toggleButton");
+          const hobbiesButton = document.getElementById("hobbiesButton");
+
+       
+      
+          // If fun fact is hidden, show it and hide hobbies
+          if (fact.style.display === "none" || fact.style.display === "") {
+            fact.style.display = "block";
+            factButton.innerText = "Hide Fun Fact";
+            
+            // Hide hobbies
+            hobbies.style.display = "none";
+            hobbiesButton.innerText = "Show Hobbies";
+          } else {
+            fact.style.display = "none";
+            factButton.innerText = "Show Fun Fact";
+          }
+        }
+
+        function toggleTheme() {
+            document.body.classList.toggle("dark");
+        }
+      
+        function toggleTheme() {
+            document.body.classList.toggle("dark");
+                const btn = document.getElementById("themeBtn");
+            btn.innerText = document.body.classList.contains("dark") ? "Light Mode" : "Dark Mode";
+        }
+
+
+        function toggleHobbies() {
+          const fact = document.getElementById("funFact");
+          const hobbies = document.getElementById("hobbies");
+          const factButton = document.getElementById("toggleButton");
+          const hobbiesButton = document.getElementById("hobbiesButton");
+      
+          // If hobbies are hidden, show them and hide fun fact
+          if (hobbies.style.display === "none" || hobbies.style.display === "") {
+            hobbies.style.display = "block";
+            hobbiesButton.innerText = "Hide Hobbies";
+      
+            // Hide fun fact
+            fact.style.display = "none";
+            factButton.innerText = "Show Fun Fact";
+          } else {
+            hobbies.style.display = "none";
+            hobbiesButton.innerText = "Show Hobbies";
+          }
+        }
+      </script>
+      
+  </body>
+</html>
