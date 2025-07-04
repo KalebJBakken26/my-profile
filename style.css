@@ -1,0 +1,77 @@
+body {
+  font-family: 'NewBaskervilleITCbyBT-Roman';
+  background-color: #e0f7fa;
+  text-align: center;
+  padding: 75px;
+}
+
+img {
+  width: 200px;
+  border-radius: 80%;
+  border: 5px solid #122560;
+}
+
+h1 {
+  color: #122560;
+}
+
+p {
+  font-size: 20px;
+  font-family: 'Georgia';
+  color: #0F1020;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  font-family: 'Georgia', sans-serif;
+  background-color: #122560;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+#funFact {
+  display: none;
+  margin-top: 20px;
+  font-weight: bold;
+  font-family: 'ZudJuiceItalic';
+  color: #122560;
+}
+
+#hobbies {
+  display: none;
+  margin-top: 20px;
+  font-family: 'ZudJuiceItalic';
+}
+
+#hobbies ul {
+  list-style: none;
+  padding: 0;
+}
+
+#themeBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 16px;
+  font-family: 'Georgia', sans-serif;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  background-color: #122560;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#themeBtn:hover {
+  background-color: #3E363F;
+}
+
+.dark {
+  background-color: #121212;
+  color: #eee;
+}
